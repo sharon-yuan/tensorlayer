@@ -10,7 +10,6 @@ import sys
 import tarfile
 import gzip
 import zipfile
-from . import visualize
 from . import nlp
 import pickle
 from six.moves import urllib
@@ -717,7 +716,7 @@ def npz_to_W_pdf(path=None, regx='w1pre_[0-9]+\.(npz)'):
     for f in file_list:
         W = load_npz(path, f)[0]
         print("%s --> %s" % (f, f.split('.')[0]+'.pdf'))
-        visualize.W(W, second=10, saveable=True, name=f.split('.')[0], fig_idx=2012)
+        #visualize.W(W, second=10, saveable=True, name=f.split('.')[0], fig_idx=2012)
 
 
 ## Helper functions
